@@ -1,6 +1,7 @@
 {
   "name": "My Calculator",
   "short_name": "Calculator",
+  "id": "/my-calculator/",
   "description": "A simple, fast and easy-to-use calculator for everyday calculations.",
   "start_url": "./index.html",
   "display": "standalone",
