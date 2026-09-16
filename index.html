@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <div class="calculator">
+      <button id="themeButton" onclick="toggleTheme()">☀️ Light Mode</button>
+      <div class="history">
+    <h2>History</h2>
+    <div id="historyList"></div>
+    <button onclick="clearHistory()">Clear History</button>
+      </div>
+
+        <input type="text" id="display" value="0" readonly>
+
+        <div class="buttons">
+          <button onclick="clearDisplay()">AC</button>
+<button onclick="deleteLast()">⌫</button>
+<button onclick="toggleSign()">±</button>
+          <button onclick="addValue('%')">%</button>
+<button class="operator" onclick="addValue('/')">÷</button>
+
+            <button onclick="addValue('7')">7</button>
+            <button onclick="addValue('8')">8</button>
+            <button onclick="addValue('9')">9</button>
+            <button class="operator" onclick="addValue('*')">×</button>
+
+            <button onclick="addValue('4')">4</button>
+            <button onclick="addValue('5')">5</button>
+            <button onclick="addValue('6')">6</button>
+            <button class="operator" onclick="addValue('-')">−</button>
+
+            <button onclick="addValue('1')">1</button>
+            <button onclick="addValue('2')">2</button>
+            <button onclick="addValue('3')">3</button>
+            <button class="operator" onclick="addValue('+')">+</button>
+
+            <button class="zero" onclick="addValue('0')">0</button>
+            <button onclick="addValue('.')">.</button>
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+  <script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+        navigator.serviceWorker.register("./sw.js");
+    });
+}
+  </script>
+
+</body>
+
+</html>
